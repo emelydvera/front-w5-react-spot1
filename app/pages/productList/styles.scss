@@ -1,0 +1,197 @@
+@import '../../components/ProductCard/styles.scss';
+@import '../../styles/variables';
+@import '../../styles/common';
+
+
+// #root-app {
+
+//     .titulo {
+//         color: green($color: #000000);
+//     }
+
+//     h3+p {
+//         background-color: antiquewhite;
+//     }
+
+//     li:nth-child(odd) {
+//         border: 1px solid grey;
+//     }
+
+//     li:nth-child(even) {
+//         border: 1px solid red;
+//     }
+
+//     li>p {
+//         margin: 3rem;
+//         background-color: aliceblue;
+//     }
+
+//     li>h3 {
+//         color: bisque;
+//     }
+
+//     ul {
+//         list-style: none;
+
+//     }
+// }
+
+// #root-app {
+
+//     div {
+//         margin: 2em;
+//         padding: 2em;
+//         border: 1rem solid aqua;
+//         font-size: 20px;
+//         height: 100vh;
+
+//     }
+
+//     ul {
+//         list-style: none;
+//         position: relative;
+//     }
+
+//     a {
+//         text-decoration: none;
+//     }
+
+//     .uno:hover {
+//         background-color: aqua;
+//         position: absolute;
+//         bottom: 0px;
+
+//     }
+
+//     .dos:focus {
+//         background-color: rosybrown;
+
+//     }
+//     .tres:active {
+//         background-color: greenyellow;
+
+//     }
+
+//     li{
+//         display: inline-block;
+//         text-align: center;
+//         padding: 1em;
+
+//     }
+
+
+
+// }
+
+// #root-app {
+
+//     .box-container {
+//         background-color: antiquewhite;
+//         margin: 10px;
+//         height: 700px;
+//         width: 700px;
+//         display: flex;
+//         // flex-direction: row, column, row-reverse, column-reverse;
+//         flex-wrap:  nowrap;
+//         // justify-content: center, flex-start, flex-end, center, space-between;
+//         // align-items: flex-start, flex-end, center, stretch;
+
+//     }
+
+//     .box-item {
+//         height: 100px;
+//         width: 100px;
+//         background-color: black;
+//         color: aliceblue;
+//         font-size: 4em;
+//         border: 1px solid green;
+
+//     }
+
+//     .uno {
+//         // flex-grow: 1;
+//         align-self: flex-end;
+
+//     }
+
+//     .dos {
+//         flex-grow: 3;
+//         align-self: center;
+//     }
+
+//     .tres {
+//         flex-grow: 2;
+//         align-self: baseline;
+//     }
+
+//     .cuatro {
+//         flex-grow: 1;
+//         align-self: flex-end;
+//         order: 1;
+//         row-gap: 5;
+//     }
+// }
+
+#root-app {
+    div {
+        display: flex;
+    }
+
+    .section-uno,
+    .section-dos {
+        border: 2px solid black;
+        height: 600px;
+    }
+
+    .section-dos {
+        flex-grow: 5;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .section-uno {
+        flex-grow: 0.5;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            border: 1px solid goldenrod;
+            background-color: antiquewhite;
+            border-radius: 2px;
+        }
+    }
+
+    ul {
+        height: 100%;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        padding-inline-start: 0px;
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .uno {
+        align-content: flex-end;
+        @include colorsize($color-letra-uno, $tamanio-letra-tres)
+    }
+
+    .dos {
+        align-content: center;
+        @include colorsize($color-letra-tres, $tamanio-letra-dos)
+    }
+
+    .tres {
+        align-content: flex-start;
+        @include colorsize($color-letra-dos, $tamanio-letra-uno)
+    }
+
+}
